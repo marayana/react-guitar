@@ -6,7 +6,7 @@ function Guitar(){
 
     return (
         <div className="guitar">
-            <GuitarBody />
+            <GuitarBody currFrets={currFrets}/>
         </div>
     )
 }
