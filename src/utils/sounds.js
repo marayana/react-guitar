@@ -17,18 +17,18 @@ function getNote(string, fret){
     return guitarNotes[index]
 }
 
+function isMuted(fret){
+    return fret < 0 || Object.is(fret, -0);
+}
+
 function playNote(string, fret){
     const [note, octave] = getNote(string, fret).split('-');
     const duration = 1.5;
     guitar.play(note, octave, duration)
 }
 
-function isMuted(fret){
-    return fret < 0 || Object.is(fret, -0);
-}
-
 function playGuitarBody(currFrets, currStrings){
     currFrets.forEach((f,s) => currStrings.includes(s) && !isMuted(f) && playNote(s,f))
 }
 
-export { playGuitarBody }
+export { playGuitarBody, playNote, isMuted }

@@ -167,3 +167,9 @@ header {
 .mute-btn input:checked + label::after {
     transform:rotate(-45deg);
 }
+
+.fret-markers {
+    position:absolute;
+    top:0;
+    left:16px;
+}
