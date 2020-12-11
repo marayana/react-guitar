@@ -23,8 +23,12 @@ function playNote(string, fret){
     guitar.play(note, octave, duration)
 }
 
+function isMuted(fret){
+    return fret < 0 || Object.is(fret, -0);
+}
+
 function playGuitarBody(currFrets, currStrings){
-    currFrets.forEach((f,s) => currStrings.includes(s) && playNote(s,f))
+    currFrets.forEach((f,s) => currStrings.includes(s) && !isMuted(f) && playNote(s,f))
 }
 
 export { playGuitarBody }

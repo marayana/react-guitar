@@ -129,3 +129,41 @@ header {
 .fretboard-bg {
     background:#402f1f;
 }
+
+
+.mute-btns {
+    display:flex;
+    flex-direction:column-reverse;
+}
+.mute-btn input {
+    width:0;
+    height:0;
+    position:absolute;
+    opacity:0;
+}
+.mute-btn label {
+    width:16px;
+    height:16px;
+    display:block;
+    background:rgba(204, 187, 170, 0.5);
+    border:1px solid #fff;
+    border-radius:2px;
+    position:relative;
+    cursor:pointer;
+}
+.mute-btn input:checked + label::before,
+.mute-btn input:checked + label::after {
+    content:'';
+    width:2px;
+    height:13px;
+    position:absolute;
+    top:0;
+    left:6px;
+    background:#a00;
+}
+.mute-btn input:checked + label::before {
+    transform:rotate(45deg);
+}
+.mute-btn input:checked + label::after {
+    transform:rotate(-45deg);
+}
