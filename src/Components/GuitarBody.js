@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
+import { playGuitarBody } from '../utils/sounds.js';
 
 function GuitarBody({ currFrets }){
 
@@ -38,6 +39,7 @@ function GuitarBody({ currFrets }){
                 className="guitar-body"
                 onMouseMove={showStringsMarker}
                 onMouseLeave={hideStringsMarker}
+                onClick={() => playGuitarBody(currFrets, currStrings)}
             >
                 <label
                     className="strum-dir-btn"
