@@ -116,3 +116,16 @@ header {
     border-radius:100px;
     pointer-events:none;
 }
+
+
+.fretboard-container {
+    display:flex;
+    overflow:hidden;
+    position:relative;
+}
+.fretboard-container svg {
+    display:block;
+}
+.fretboard-bg {
+    background:#402f1f;
+}
