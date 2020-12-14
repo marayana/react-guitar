@@ -6,9 +6,9 @@ function Guitar(){
 
     const [currFrets, setCurrFrets] = useState([0,0,0,0,0,0]);
 
-    function updateCurrFrets(string, fret, shouldToggle){
+    function updateCurrFrets(string, fret){
         let newFrets = [...currFrets];
-        newFrets[string] = shouldToggle ? newFrets[string] * -1 : fret;
+        newFrets[string] = fret !== undefined ? fret : newFrets[string] * -1;
         setCurrFrets(newFrets);
     }
 

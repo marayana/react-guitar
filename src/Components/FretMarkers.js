@@ -46,10 +46,13 @@ function FretMarkers( {currFrets, updateCurrFrets }){
     return (
         <div className="fret-markers">
             <svg
-                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 96" width="720" height="96"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox={`0 0 ${fbSize.width} ${fbSize.height}`}
+                width={`${fbSize.width}`}
+                height={`${fbSize.height}`}
                 onClick={()=>{
                     playNote(string, fret);
-                    updateCurrFrets(string, fret, false);
+                    updateCurrFrets(string, fret);
                 }}
                 onMouseMove={showMarker}
                 onMouseLeave={hideMarker}

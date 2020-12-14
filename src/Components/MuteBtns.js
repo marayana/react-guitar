@@ -11,7 +11,7 @@ function MuteBtns({ currFrets, updateCurrFrets }){
                             id={`mute-${i}`}
                             type="checkbox"
                             checked={isChecked}
-                            onChange={() => updateCurrFrets(i, null, true)}
+                            onChange={() => updateCurrFrets(i)}
                         />
                         <label htmlFor={`mute-${i}`}></label>
                     </div>
