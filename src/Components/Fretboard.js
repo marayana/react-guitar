@@ -1,3 +1,4 @@
+import React from 'react';
 import FretboardBg from './FretboardBg.js';
 
 function Fretboard(){
