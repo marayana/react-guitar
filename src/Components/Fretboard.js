@@ -1,3 +1,4 @@
+import React from 'react';
 import MuteBtns from './MuteBtns.js';
 import FretboardBg from './FretboardBg.js';
 import FretMarkers from './FretMarkers.js';
