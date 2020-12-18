@@ -173,3 +173,6 @@ header {
     top:0;
     left:16px;
 }
+.fret-markers circle {
+    pointer-events:none;
+}

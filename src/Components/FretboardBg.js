@@ -1,3 +1,4 @@
+import React from 'react';
 import { fbSize, stringPositions, fretPositions } from '../utils/fretboardValues.js';
 
 function FretboardBg(){

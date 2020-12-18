@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { FaArrowDown, FaArrowUp } from 'react-icons/fa';
 import { playGuitarBody } from '../utils/sounds.js';
 

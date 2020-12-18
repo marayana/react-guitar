@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import Header from './Components/Header.js';
 import Guitar from './Components/Guitar.js';
