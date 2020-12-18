@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { fbSize, fretPositions, stringPositions } from '../utils/fretboardValues.js';
 import { playNote, isMuted } from '../utils/sounds.js';
 
