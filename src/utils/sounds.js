@@ -15,8 +15,8 @@ function playNote(string, fret){
     guitar.play(note, octave, duration)
 }
 
-function playGuitarBody(currFrets, currStrings){
-    currFrets.forEach((f,s) => currStrings.includes(s) && playNote(s,f))
+function playGuitarBody(strings, frets){
+    frets.forEach((f,s) => strings.includes(s) && playNote(s,f))
 }
 
 export { playGuitarBody }
