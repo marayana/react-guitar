@@ -1,24 +1,16 @@
 import { guitar } from './audiosynth.js';
 
-function createGuitarNotes(){
-    const arr = [];
-    const notes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
-    for (let octave = 2; octave < 7; octave++){
-        notes.forEach(note => arr.push(`${note}-${octave}`))
-    }
-    return arr.slice(4)
-};
-
-const guitarNotes = createGuitarNotes();
-
 function getNote(string, fret){
-    const open = [0,5,10,15,19,24];
+    const notes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
+    const open = [4,9,14,19,23,28];
     const index = open[string] + fret;
-    return guitarNotes[index]
+    const note = notes[index%12];
+    const octave = Math.floor(index/12) + 2;
+    return [note, octave]
 }
 
 function playNote(string, fret){
-    const [note, octave] = getNote(string, fret).split('-');
+    const [note, octave] = getNote(string, fret);
     const duration = 1.5;
     guitar.play(note, octave, duration)
 }
