@@ -39,7 +39,7 @@ function GuitarBody({ currFrets }){
                 className="guitar-body"
                 onMouseMove={showStringsMarker}
                 onMouseLeave={hideStringsMarker}
-                onClick={() => playGuitarBody(currFrets, currStrings)}
+                onClick={() => playGuitarBody(currStrings, currFrets)}
             >
                 <label
                     className="strum-dir-btn"

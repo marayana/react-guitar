@@ -19,8 +19,8 @@ function isMuted(fret){
     return fret < 0 || Object.is(fret, -0);
 }
 
-function playGuitarBody(currFrets, currStrings){
-    currFrets.forEach((f,s) => currStrings.includes(s) && !isMuted(f) && playNote(s,f))
+function playGuitarBody(strings, frets){
+    frets.forEach((f,s) => strings.includes(s) && !isMuted(f) && playNote(s,f))
 }
 
 export { playGuitarBody }
