@@ -4,8 +4,8 @@ function getNote(string, fret){
     const notes = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
     const open = [4,9,14,19,23,28];
     const index = open[string] + fret;
-    const note = notes[(index)%12];
-    const octave = Math.floor((index)/12) + 2;
+    const note = notes[index%12];
+    const octave = Math.floor(index/12) + 2;
     return [note, octave]
 }
 
