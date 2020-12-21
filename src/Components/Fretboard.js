@@ -1,7 +1,6 @@
 import React from 'react';
 import MuteBtns from './MuteBtns.js';
 import FretboardBg from './FretboardBg.js';
-import FretMarkers from './FretMarkers.js';
 
 function Fretboard({ currFrets, updateCurrFrets }){
 
@@ -12,10 +11,6 @@ function Fretboard({ currFrets, updateCurrFrets }){
                 updateCurrFrets={updateCurrFrets}
             />
             <FretboardBg />
-            <FretMarkers
-                currFrets={currFrets}
-                updateCurrFrets={updateCurrFrets}
-            />
         </div>
     )
 }
