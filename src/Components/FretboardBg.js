@@ -81,9 +81,9 @@ function FretboardBg(){
                 width={`${fbSize.width}`}
                 height={`${fbSize.height}`}
             >
-                {strings}
                 {nut}
                 {frets}
+                {strings}
                 {dots}
             </svg>
         </div>
